@@ -2,18 +2,18 @@
 param location string = resourceGroup().location
 
 @description('Tags. CreatedBy must be declared when run')
-param CreatedBy string = 'Paul McCormack'
+param CreatedBy string = ''
 @allowed(['Production','Test','Training','Development'])
-param Purpose string = 'Production'
+param Purpose string = ''
 @allowed(['DDaT','Place','People','Service Reform'])
-param MgtArea string = 'DDaT'
+param MgtArea string = ''
 
-param vnetRG string = 'rg-uks-connectivity-network'
-param vnetName string = 'vnet-uks-connectivity-hub'
+param vnetRG string = ''
+param vnetName string = ''
 param subnetName string = 'AzureFirewallSubnet'
-param publicIp string = 'pip-afw-uks-hub-01'
-param fwPolicyName string = 'fwpol-connectivity-hub'
-param fwName string = 'afw-uks-conectivity-hub-01'
+param publicIp string = ''
+param fwPolicyName string = ''
+param fwName string = ''
 
 resource afwSubnet 'Microsoft.Network/virtualNetworks/subnets@2022-11-01' existing = {
   name: '${vnetName}/${subnetName}'
