@@ -1,4 +1,4 @@
-param fwPolicyName string = 'fwpol-connectivity-hub'
+param fwPolicyName string = ''
 
 param sytemRequiredOutboundFqdns array = [
   '*.msappproxy.net'
